@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Header Section-->
+  <header class="header" id="header">
+  <nav class="navbar">
+    <!-- Left: Logo + Brand -->
+    <div class="logo-container">
+      <img src="/img/logo.png" alt="Pustaka Biru Logo" class="logo">
+      <h1 class="brand">Ai Project</h1>
+    </div>
+
+    <!-- Right: Register/Login + Icons -->
+    <div class="nav-right">
+      <div class="auth-links">
+        <a href="login/index.html" class="login">Login</a>
+      </div>
+
+      <div class="nav-icons">
+        <div class="icon-wrapper" data-tooltip="Home">
+          <a href="Index.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="icon-wrapper" data-tooltip="Info">
+          <a href="info/info.html"><i class="fa-solid fa-circle-info"></i></a>
+        </div>
+        <div class="icon-wrapper" data-tooltip="Profile">
+          <a href="Profile/index.html"><i class="fa fa-user"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Toggle Button (stays visible always) -->
+<button class="nav-toggle" id="navToggle">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+
+
+  <!-- Background Code -->
+  <main>
+    <div class="vignette"></div>
+    <img src="/img/Back.png" alt="" data-speedx="0.3" data-speedy="0.32" data-distance="-200" class="parallax Back">
+    <img src="/img/Second.png" alt="" data-speedx="0.20" data-speedy="0.22" data-distance="400" class="parallax Second">
+    <img src="/img/Third.png" alt="" data-speedx="0.25" data-speedy="0.27" data-distance="1000" class="parallax Third">
+    <img src="/img/Fourth.png" alt="" data-speedx="0.38"data-speedy="0.40" data-distance="1400" class="parallax Fourth">
+    <img src="/img/Fifth.png" alt="" data-speedx="0.4" data-speedy="0.42" data-distance="1500" class="parallax Fifth">
+    <div class="text">
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

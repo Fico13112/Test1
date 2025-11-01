@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+  flex: 1;
+  padding: 3rem 2.5rem;
+}
+
+.contact-form h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.contact-form h1 span {
+  color: #007bff;
+}
+
+.contact-form p {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.contact-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  background: #f4f7fb;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.attach-btn {
+  background: #f4f7fb;
+  padding: .9rem 1.3rem;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #666;
+  font-size: 0.95rem;
+  transition: all .3s ease;
+}
+
+.attach-btn:hover {
+  background: #e8eef8;
+}
+
+.send-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: .9rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.send-btn:hover {
+  background: #0066d3;
+}
+
+.contact-image {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 300%;
+}
+
+.wave-shape {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  background: #fff;
+  clip-path: path('M60,0 C20,100 100,200 60,300 C100,400 20,500 60,600 L0,600 L0,0 Z');
+}
+
+/* Header and Toggle */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9ff;
+  padding: 12px 40px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  opacity: 95%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #003b7a;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #004080;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #007bff;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-icons a {
+  color: #004080;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: #007bff;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.icon-wrapper::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: #004080;
+  color: white;
+  font-size: 0.75rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon-wrapper:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #ffffff;
+  color: #004080;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1100; /* stays above everything */
+  opacity: 40%;
+}
+
+.nav-toggle:hover {
+  transform: scale(1.1);
+  background: #f0f4ff;
+  opacity: 100%;
+}
+
+.nav-toggle i {
+  font-size: 1.2rem;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}

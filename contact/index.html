@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+      <!--Header Section-->
+  <header class="header" id="header">
+  <nav class="navbar">
+    <!-- Left: Logo + Brand -->
+    <div class="logo-container">
+      <img src="/img/logo.png" alt="Pustaka Biru Logo" class="logo">
+      <h1 class="brand">Ai Project</h1>
+    </div>
+
+    <!-- Right: Register/Login + Icons -->
+    <div class="nav-right">
+      <div class="auth-links">
+        <a href="../login/index.html" class="login">Login</a>
+      </div>
+
+      <div class="nav-icons">
+        <div class="icon-wrapper" data-tooltip="Home">
+          <a href="../Index.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="icon-wrapper" data-tooltip="Info">
+          <a href="../info/info.html"><i class="fa-solid fa-circle-info"></i></a>
+        </div>
+        <div class="icon-wrapper" data-tooltip="Profile">
+          <a href="../Profile/index.html"><i class="fa fa-user"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Toggle Button (stays visible always) -->
+<button class="nav-toggle" id="navToggle">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-form">
+        <h1>Let's work <span>together.</span></h1>
+        <p>Or reach us via : <a href="mailto:ficoadrien1113@gmail.com">ficoadrien1113@gmail.com</a></p>
+        <form action="https://formspree.io/f/xqagzvow" method="POST" enctype="multipart/form-data">
+            <div class="name-fields">
+                <input type="text" name="first_name" placeholder="First name" required>
+                <input type="text" name="last_name" placeholder="Last name" required>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <div class="buttons">
+                <label class="attach-btn">
+                    <i class="fa-solid fa-paperclip"></i> Add attachment
+                    <input type="file" name="attachment" hidden>
+                </label>
+                <button type="submit" class="send-btn">Send message</button>
+            </div>
+        </form>
+      </div>
+
+      <div class="contact-image">
+        <img src="../img/Second2.jpg" alt="Contact background">
+        <div class="wave-shape"></div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
+

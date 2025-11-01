@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Body */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  background-color: #333;
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Header and Toggle */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9ff;
+  padding: 12px 40px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  opacity: 95%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #003b7a;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #004080;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #007bff;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-icons a {
+  color: #004080;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: #007bff;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.icon-wrapper::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: #004080;
+  color: white;
+  font-size: 0.75rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon-wrapper:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #ffffff;
+  color: #004080;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1100; /* stays above everything */
+  opacity: 40%;
+}
+
+.nav-toggle:hover {
+  transform: scale(1.1);
+  background: #f0f4ff;
+  opacity: 100%;
+}
+
+.nav-toggle i {
+  font-size: 1.2rem;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+/* The Parralax Effect Section */
+
+main{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.parallax {
+  pointer-events: none;
+  transition: 0.005s;
+  transform: translate(-50%, -50%);
+}
+
+.Back {
+  position: absolute;
+  width: 2800px;
+  top: calc(50% - 20px);
+  left: calc(50%);
+  z-index: 2;
+}
+
+.Second {
+  position: absolute;
+  width: 2000px;
+  top: calc(50% - 20px);
+  left: calc(50%);
+  z-index: 40;
+}
+
+
+.Third {
+  position: absolute;
+  width: 1600px;
+  top: calc(50% - 5px);
+  left: calc(50%);
+  z-index:50;
+}
+
+
+.Fourth {
+  position: absolute;
+  width: 1600px;
+  top: calc(50% - 5px);
+  left: calc(50%);
+  z-index: 60;
+  pointer-events: auto;
+}
+
+
+.Fifth {
+  position: absolute;
+  width: 1600px;
+  top: calc(50% - 5px);
+  left: calc(50%);
+  z-index: 70;
+}
+
+.vignette {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  pointer-events: none;
+}
