@@ -70,3 +70,14 @@ toggleBtn.addEventListener('click', () => {
     ? '<i class="fa-solid fa-chevron-up"></i>'
     : '<i class="fa-solid fa-chevron-down"></i>';
 });
+
+
+fetch("https://api.github.com/user", {
+  headers: {
+    "Authorization": "Bearer YOUR_GITHUB_TOKEN",
+    "Accept": "application/vnd.github.v3+json"
+  }
+})
+  .then(res => res.json())
+  .then(data => console.log(data));
+
